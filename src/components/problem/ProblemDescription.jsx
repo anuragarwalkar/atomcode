@@ -259,7 +259,7 @@ export function ProblemDescription({
                     <span>{sol.space}</span>
                   </div>
                 </div>
-                <pre className="p-3 rounded-lg bg-slate-900 text-slate-100 font-mono text-xs overflow-x-auto">
+                <pre className="p-3 rounded-lg bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-100 border border-slate-200 dark:border-slate-800 font-mono text-xs overflow-x-auto">
                   <code>{sol.code}</code>
                 </pre>
               </div>

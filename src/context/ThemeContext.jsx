@@ -26,6 +26,11 @@ export function ThemeProvider({ children }) {
       root.classList.add('light');
       root.classList.remove('dark');
     }
+    if (document.body) {
+      document.body.classList.remove('dark');
+      document.body.classList.remove('light');
+    }
+    root.style.colorScheme = theme;
     try {
       localStorage.setItem('atomcode-theme', theme);
     } catch (e) {

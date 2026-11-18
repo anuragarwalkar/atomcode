@@ -69,7 +69,7 @@ export function HomePage() {
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-8">
         {/* Header Hero Banner */}
-        <div className="relative mb-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-cyan-950/40 via-slate-900/40 to-blue-950/40 border border-cyan-500/20 shadow-xl overflow-hidden">
+        <div className="relative mb-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-cyan-50/70 via-sky-50/50 to-blue-50/70 dark:from-cyan-950/40 dark:via-slate-900/40 dark:to-blue-950/40 border border-cyan-200 dark:border-cyan-500/20 shadow-xl overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
           <div className="relative z-10 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/15 border border-cyan-500/30 text-cyan-600 dark:text-cyan-400 text-xs font-semibold mb-3">

@@ -51,10 +51,31 @@ export function CodeEditor({
       },
     });
 
+    // Custom light theme with atom cyan highlights
+    monaco.editor.defineTheme('atom-light', {
+      base: 'vs',
+      inherit: true,
+      rules: [
+        { token: 'comment', foreground: '64748b', fontStyle: 'italic' },
+        { token: 'keyword', foreground: '0284c7', fontStyle: 'bold' },
+        { token: 'number', foreground: '7c3aed' },
+        { token: 'string', foreground: '059669' },
+        { token: 'identifier', foreground: '0f172a' },
+      ],
+      colors: {
+        'editor.background': '#ffffff',
+        'editor.foreground': '#0f172a',
+        'editor.lineHighlightBackground': '#f8fafc',
+        'editorLineNumber.foreground': '#94a3b8',
+        'editorLineNumber.activeForeground': '#0284c7',
+        'editorGutter.background': '#ffffff',
+      },
+    });
+
     if (theme === 'dark') {
       monaco.editor.setTheme('atom-dark');
     } else {
-      monaco.editor.setTheme('vs');
+      monaco.editor.setTheme('atom-light');
     }
   };
 
@@ -64,7 +85,7 @@ export function CodeEditor({
       if (theme === 'dark') {
         monacoRef.current.editor.setTheme('atom-dark');
       } else {
-        monacoRef.current.editor.setTheme('vs');
+        monacoRef.current.editor.setTheme('atom-light');
       }
     }
   }, [theme]);
@@ -159,7 +180,7 @@ export function CodeEditor({
           value={code}
           onChange={(val) => onChange(val || '')}
           onMount={handleEditorDidMount}
-          theme={theme === 'dark' ? 'atom-dark' : 'vs'}
+          theme={theme === 'dark' ? 'atom-dark' : 'atom-light'}
           options={{
             fontSize: fontSize,
             fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
