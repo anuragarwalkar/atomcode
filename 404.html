@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/atomcode/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AtomCode — Interactive JavaScript Coding & Live Debugger</title>
+    <meta name="description" content="Master JavaScript data structures and algorithms with interactive problems and live step-by-step JS-Interpreter debugger." />
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('atomcode-theme');
+          var isDark = saved ? saved === 'dark' : !window.matchMedia('(prefers-color-scheme: light)').matches;
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.classList.add('light');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/atomcode/assets/index-4kwYkknk.js"></script>
+    <link rel="stylesheet" crossorigin href="/atomcode/assets/index-Cx6WouMJ.css">
+  </head>
+  <body class="antialiased selection:bg-cyan-500/25 selection:text-cyan-300">
+    <div id="root"></div>
+  </body>
+</html>
