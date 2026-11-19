@@ -7,7 +7,7 @@ import { ProblemPage } from './pages/ProblemPage';
 export function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/problem/:id" element={<ProblemPage />} />

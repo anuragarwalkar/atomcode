@@ -43,7 +43,7 @@ export function MainActionToolbar({
           title="Back to Problem List"
           className="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-1 text-xs font-medium"
         >
-          <img src="/logo.png" alt="Logo" className="w-5 h-5 object-contain" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" className="w-5 h-5 object-contain" />
           <List className="w-4 h-4 ml-1" />
           <span className="hidden sm:inline">Problem List</span>
         </Link>

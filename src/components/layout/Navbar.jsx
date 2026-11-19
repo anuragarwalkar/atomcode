@@ -18,7 +18,7 @@ export function Navbar({ solvedCount = 0, totalCount = 20 }) {
           <Link to="/" className="flex items-center gap-2.5 group">
             <div className="relative w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center p-0.5 bg-gradient-to-tr from-cyan-500/20 to-blue-600/30 border border-cyan-500/30 shadow-md shadow-cyan-500/10 group-hover:border-cyan-400 group-hover:shadow-cyan-500/25 transition-all">
               <img
-                src="/logo.png"
+                src={`${import.meta.env.BASE_URL}logo.png`}
                 alt="AtomCode Logo"
                 className="w-full h-full object-contain rounded-md filter drop-shadow"
               />
