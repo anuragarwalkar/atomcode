@@ -4,12 +4,6 @@ import {
   BookOpen,
   FlaskConical,
   History,
-  ThumbsUp,
-  ThumbsDown,
-  Star,
-  Share2,
-  HelpCircle,
-  Tag,
   CheckCircle2,
   Copy,
   Check,
@@ -24,33 +18,7 @@ export function ProblemDescription({
   submissionHistory = [],
 }) {
   const [activeTab, setActiveTab] = useState('description');
-  const [likes, setLikes] = useState(71420);
-  const [dislikes, setDislikes] = useState(210);
-  const [userVoted, setUserVoted] = useState(null); // 'like' | 'dislike' | null
-  const [isStarred, setIsStarred] = useState(false);
   const [copiedIndex, setCopiedIndex] = useState(null);
-
-  const handleLike = () => {
-    if (userVoted === 'like') {
-      setUserVoted(null);
-      setLikes((l) => l - 1);
-    } else {
-      if (userVoted === 'dislike') setDislikes((d) => d - 1);
-      setUserVoted('like');
-      setLikes((l) => l + 1);
-    }
-  };
-
-  const handleDislike = () => {
-    if (userVoted === 'dislike') {
-      setUserVoted(null);
-      setDislikes((d) => d - 1);
-    } else {
-      if (userVoted === 'like') setLikes((l) => l - 1);
-      setUserVoted('dislike');
-      setDislikes((d) => d + 1);
-    }
-  };
 
   const copyExample = (text, idx) => {
     navigator.clipboard.writeText(text);
@@ -307,47 +275,6 @@ export function ProblemDescription({
             )}
           </div>
         )}
-      </div>
-
-      {/* Bottom Bar: Likes, Star, Online Counter (matches reference screenshot) */}
-      <div className="h-10 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between px-4 bg-slate-50/60 dark:bg-[#0d121f] text-xs text-slate-500 dark:text-slate-400 flex-shrink-0">
-        <div className="flex items-center gap-3">
-          <button
-            onClick={handleLike}
-            className={`flex items-center gap-1 hover:text-slate-900 dark:hover:text-slate-100 transition-colors cursor-pointer ${
-              userVoted === 'like' ? 'text-cyan-500 dark:text-cyan-400 font-semibold' : ''
-            }`}
-          >
-            <ThumbsUp className="w-3.5 h-3.5" />
-            <span>{(likes / 1000).toFixed(1)}K</span>
-          </button>
-
-          <button
-            onClick={handleDislike}
-            className={`flex items-center gap-1 hover:text-slate-900 dark:hover:text-slate-100 transition-colors cursor-pointer ${
-              userVoted === 'dislike' ? 'text-rose-500 font-semibold' : ''
-            }`}
-          >
-            <ThumbsDown className="w-3.5 h-3.5" />
-            <span>{dislikes}</span>
-          </button>
-
-          <button
-            onClick={() => setIsStarred(!isStarred)}
-            className={`hover:text-amber-400 transition-colors cursor-pointer ${
-              isStarred ? 'text-amber-400 fill-amber-400' : ''
-            }`}
-          >
-            <Star className={`w-3.5 h-3.5 ${isStarred ? 'fill-current' : ''}`} />
-          </button>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-[11px] font-medium text-slate-600 dark:text-slate-300">
-            889 Online
-          </span>
-        </div>
       </div>
     </div>
   );
