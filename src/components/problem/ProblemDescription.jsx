@@ -9,8 +9,6 @@ import {
   Check,
 } from 'lucide-react';
 import { DifficultyBadge } from '../home/DifficultyBadge';
-import { Badge } from '../ui/Badge';
-import { Button } from '../ui/Button';
 
 export function ProblemDescription({
   problem,
@@ -32,11 +30,10 @@ export function ProblemDescription({
       <div className="h-10 border-b border-slate-200 dark:border-slate-800 flex items-center px-2 bg-slate-50/50 dark:bg-[#0d121f] flex-shrink-0">
         <button
           onClick={() => setActiveTab('description')}
-          className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer ${
-            activeTab === 'description'
-              ? 'text-cyan-600 dark:text-cyan-400 bg-white dark:bg-slate-800 shadow-sm font-semibold'
-              : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
-          }`}
+          className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer ${activeTab === 'description'
+            ? 'text-cyan-600 dark:text-cyan-400 bg-white dark:bg-slate-800 shadow-sm font-semibold'
+            : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
+            }`}
         >
           <FileText className="w-3.5 h-3.5" />
           <span>Description</span>
@@ -44,11 +41,10 @@ export function ProblemDescription({
 
         <button
           onClick={() => setActiveTab('editorial')}
-          className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer ${
-            activeTab === 'editorial'
-              ? 'text-cyan-600 dark:text-cyan-400 bg-white dark:bg-slate-800 shadow-sm font-semibold'
-              : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
-          }`}
+          className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer ${activeTab === 'editorial'
+            ? 'text-cyan-600 dark:text-cyan-400 bg-white dark:bg-slate-800 shadow-sm font-semibold'
+            : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
+            }`}
         >
           <BookOpen className="w-3.5 h-3.5" />
           <span>Editorial</span>
@@ -56,11 +52,10 @@ export function ProblemDescription({
 
         <button
           onClick={() => setActiveTab('solutions')}
-          className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer ${
-            activeTab === 'solutions'
-              ? 'text-cyan-600 dark:text-cyan-400 bg-white dark:bg-slate-800 shadow-sm font-semibold'
-              : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
-          }`}
+          className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer ${activeTab === 'solutions'
+            ? 'text-cyan-600 dark:text-cyan-400 bg-white dark:bg-slate-800 shadow-sm font-semibold'
+            : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
+            }`}
         >
           <FlaskConical className="w-3.5 h-3.5" />
           <span>Solutions</span>
@@ -68,11 +63,10 @@ export function ProblemDescription({
 
         <button
           onClick={() => setActiveTab('submissions')}
-          className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer ${
-            activeTab === 'submissions'
-              ? 'text-cyan-600 dark:text-cyan-400 bg-white dark:bg-slate-800 shadow-sm font-semibold'
-              : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
-          }`}
+          className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer ${activeTab === 'submissions'
+            ? 'text-cyan-600 dark:text-cyan-400 bg-white dark:bg-slate-800 shadow-sm font-semibold'
+            : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
+            }`}
         >
           <History className="w-3.5 h-3.5" />
           <span>Submissions</span>
@@ -254,11 +248,10 @@ export function ProblemDescription({
                   >
                     <div className="flex items-center gap-2">
                       <span
-                        className={`font-bold ${
-                          sub.status === 'Accepted'
-                            ? 'text-emerald-500'
-                            : 'text-rose-500'
-                        }`}
+                        className={`font-bold ${sub.status === 'Accepted'
+                          ? 'text-emerald-500'
+                          : 'text-rose-500'
+                          }`}
                       >
                         {sub.status}
                       </span>
